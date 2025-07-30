@@ -1,0 +1,363 @@
+<html>
+<head>
+    <link rel="icon" href="logo.jpg">
+    <title>Vavoom trading limited</title>
+</head>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-tagline {
+            display: inline-block;
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .section-title span {
+            color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+        }
+        
+        .section-description {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: var(--text-light);
+            font-size: 18px;
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+        
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+            z-index: 1;
+        }
+        
+        .card-content {
+            padding: 25px;
+            position: relative;
+        }
+        
+        .card-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .card-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .card-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary-color);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .read-more i {
+            margin-left: 8px;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            color: var(--accent-color);
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* CTA Button */
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .section-description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">What We Offer</span>
+                <h2 class="section-title">Our <span>Premium</span> Services</h2>
+                <p class="section-description">Comprehensive solutions tailored to your business requirements</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="truck.jpg" alt="Transportation Services" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Transportation & Storage</h3>
+                        <p>End-to-end logistics solutions with temperature-controlled storage facilities and real-time tracking for your raw materials and products.</p>
+                       
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="construction.jpg" alt="Construction Services" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Construction</h3>
+                        <p>Full-service construction capabilities from planning to execution, using quality materials and adhering to strict safety standards.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="mining.jpeg" alt="Mining Services" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mining & Quarrying</h3>
+                        <p>Specialized mineral extraction and processing services with environmentally responsible practices and modern equipment.</p>
+                       
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="wholesale.jpeg" alt="Wholesale Services" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Wholesale & Retail</h3>
+                        <p>Extensive distribution network offering competitive pricing and reliable supply chains for businesses of all sizes.</p>
+                       
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="service.jpeg" alt="Vehicle Services" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Vehicle Services</h3>
+                        <p>Certified repair and maintenance services for all types of motor vehicles and motorcycles by experienced technicians.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="delivary.jpg" alt="Supply Chain Solutions" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Supply Chain Solutions</h3>
+                        <p>Customized logistics strategies to optimize your operations, reduce costs, and enhance efficiency across your supply chain.</p>
+                     
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" class="cta-button">Back to Main Website</a>
+             </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
